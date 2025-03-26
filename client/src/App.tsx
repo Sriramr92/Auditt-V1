@@ -11,6 +11,7 @@ import VerifiedAuditors from "@/pages/verified-auditors";
 import Contributors from "@/pages/contributors";
 import Compliance from "@/pages/compliance";
 import Community from "@/pages/community";
+import ProgressTrackers from "@/pages/progress-trackers";
 import NotFound from "@/pages/not-found";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contributors" component={Contributors} />
           <Route path="/compliance" component={Compliance} />
           <Route path="/community" component={Community} />
+          <Route path="/progress-trackers" component={ProgressTrackers} />
           <Route component={NotFound} />
         </Switch>
       </main>
