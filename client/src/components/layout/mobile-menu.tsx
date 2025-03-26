@@ -38,6 +38,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         <Link href="/compliance" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
           Regulatory Compliance
         </Link>
+        <Link href="/progress-trackers" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
+          Progress Trackers
+        </Link>
         <Link href="/community" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
           Community
         </Link>
