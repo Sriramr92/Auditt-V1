@@ -35,11 +35,11 @@ const HeroSection: React.FC = () => {
           <div className="mt-12 pt-4">
             <p className="text-gray-400 text-sm uppercase tracking-wider mb-4">Trusted by industry leaders</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
-              <div className="h-8 w-28 bg-white/20 rounded"></div>
-              <div className="h-8 w-28 bg-white/20 rounded"></div>
-              <div className="h-8 w-28 bg-white/20 rounded"></div>
-              <div className="h-8 w-28 bg-white/20 rounded"></div>
-              <div className="h-8 w-28 bg-white/20 rounded"></div>
+              <img src={PartnerLogo1} alt="Partner logo" className="h-8" />
+              <img src={PartnerLogo2} alt="Partner logo" className="h-8" />
+              <img src={PartnerLogo3} alt="Partner logo" className="h-8" />
+              <img src={PartnerLogo4} alt="Partner logo" className="h-8" />
+              <img src={PartnerLogo5} alt="Partner logo" className="h-8" />
             </div>
           </div>
         </div>
