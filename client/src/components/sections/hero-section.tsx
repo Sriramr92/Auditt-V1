@@ -9,31 +9,31 @@ import PartnerLogo5 from '../../assets/partner-logo5.svg';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-dark-600 to-dark-700 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-gray-100">
       {/* Hex Grid Background */}
-      <div className="absolute inset-0 opacity-30 z-0 hex-grid"></div>
+      <div className="absolute inset-0 opacity-15 z-0 hex-grid"></div>
       
       <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-slate-800">
             Trust in Every Transaction, <br className="hidden md:inline" />
-            <span className="text-primary-400">Transparency in Every Audit</span>
+            <span className="text-primary-600">Transparency in Every Audit</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-8 text-slate-600 max-w-3xl mx-auto">
             Auditt is the leading Web3 security platform offering bug bounty programs and a verified auditor network backed by blockchain-based transparency.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button size="lg" className="bg-primary-600 hover:bg-primary-700 text-white">
               Explore Bug Bounty Programs
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent hover:bg-white/10 border border-white text-white">
+            <Button size="lg" variant="outline" className="bg-transparent hover:bg-gray-100 border border-primary-600 text-primary-600">
               Connect with Auditors
             </Button>
           </div>
           
           {/* Trusted by Section */}
           <div className="mt-12 pt-4">
-            <p className="text-gray-400 text-sm uppercase tracking-wider mb-4">Trusted by industry leaders</p>
+            <p className="text-slate-500 text-sm uppercase tracking-wider mb-4">Trusted by industry leaders</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
               <img src={PartnerLogo1} alt="Partner logo" className="h-8" />
               <img src={PartnerLogo2} alt="Partner logo" className="h-8" />
