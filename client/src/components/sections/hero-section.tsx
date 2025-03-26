@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import PartnerLogo1 from '../../assets/partner-logo1.svg';
+import PartnerLogo2 from '../../assets/partner-logo2.svg';
+import PartnerLogo3 from '../../assets/partner-logo3.svg';
+import PartnerLogo4 from '../../assets/partner-logo4.svg';
+import PartnerLogo5 from '../../assets/partner-logo5.svg';
 
 const HeroSection: React.FC = () => {
   return (
