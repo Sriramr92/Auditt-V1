@@ -16,7 +16,7 @@ const Business: React.FC = () => {
                 Secure Your Web3 Project with Confidence
               </h1>
               <p className="text-white/90 text-lg mb-8 md:pr-8">
-                VerityChain provides comprehensive security solutions for blockchain projects through transparent audit processes, verified security experts, and managed bug bounty programs.
+                Auditt provides comprehensive security solutions for blockchain projects through transparent audit processes, verified security experts, and managed bug bounty programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-white text-primary-600 hover:bg-white/90" size="lg">
@@ -94,7 +94,7 @@ const Business: React.FC = () => {
       <section className="py-16 bg-light-500">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-dark-700">Why Choose VerityChain</h2>
+            <h2 className="text-3xl font-bold mb-4 text-dark-700">Why Choose Auditt</h2>
             <p className="text-lg text-gray-600">Our platform offers unique advantages for Web3 business security needs</p>
           </div>
 
@@ -134,7 +134,7 @@ const Business: React.FC = () => {
               Success Stories
             </span>
             <h2 className="text-3xl font-bold mb-4 text-dark-700">How We've Helped Web3 Projects</h2>
-            <p className="text-lg text-gray-600">See how VerityChain has helped secure leading blockchain platforms</p>
+            <p className="text-lg text-gray-600">See how Auditt has helped secure leading blockchain platforms</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
