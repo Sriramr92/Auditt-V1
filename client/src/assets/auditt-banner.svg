@@ -1,0 +1,49 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1930;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a76d2;stop-opacity:0.7" />
+    </linearGradient>
+    <pattern id="hexGrid" width="50" height="50" patternUnits="userSpaceOnUse" patternTransform="rotate(60)">
+      <path d="M25,0 L50,14.4 L50,43.3 L25,57.7 L0,43.3 L0,14.4 Z" fill="none" stroke="#2a76d2" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+  <rect width="100%" height="100%" fill="url(#hexGrid)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="200" r="80" fill="#2a76d2" opacity="0.1" />
+  <circle cx="1000" cy="100" r="60" fill="#2a76d2" opacity="0.1" />
+  <circle cx="800" cy="300" r="50" fill="#2a76d2" opacity="0.1" />
+  
+  <!-- Connection lines representing blockchain -->
+  <g stroke="#2a76d2" stroke-width="1" opacity="0.3">
+    <line x1="100" y1="100" x2="200" y2="150" />
+    <line x1="200" y1="150" x2="300" y2="100" />
+    <line x1="300" y1="100" x2="400" y2="200" />
+    <line x1="400" y1="200" x2="500" y2="150" />
+    <line x1="500" y1="150" x2="600" y2="250" />
+    <line x1="600" y1="250" x2="700" y2="200" />
+    <line x1="700" y1="200" x2="800" y2="250" />
+    <line x1="800" y1="250" x2="900" y2="150" />
+    <line x1="900" y1="150" x2="1000" y2="200" />
+    <line x1="1000" y1="200" x2="1100" y2="150" />
+  </g>
+  
+  <!-- Dots representing nodes -->
+  <g fill="#2a76d2">
+    <circle cx="100" cy="100" r="4" />
+    <circle cx="200" cy="150" r="4" />
+    <circle cx="300" cy="100" r="4" />
+    <circle cx="400" cy="200" r="4" />
+    <circle cx="500" cy="150" r="4" />
+    <circle cx="600" cy="250" r="4" />
+    <circle cx="700" cy="200" r="4" />
+    <circle cx="800" cy="250" r="4" />
+    <circle cx="900" cy="150" r="4" />
+    <circle cx="1000" cy="200" r="4" />
+    <circle cx="1100" cy="150" r="4" />
+  </g>
+</svg>
