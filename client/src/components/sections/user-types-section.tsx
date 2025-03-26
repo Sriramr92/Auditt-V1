@@ -58,7 +58,7 @@ const userTypes: UserType[] = [
 
 const UserTypesSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading
           tagline="Solutions For Everyone"
@@ -68,27 +68,37 @@ const UserTypesSection: React.FC = () => {
         
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {userTypes.map((userType, index) => (
-            <div key={index} className="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className={`h-40 ${userType.bgClass} flex items-center justify-center p-4`}>
-                {userType.icon}
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-dark-700">{userType.title}</h3>
-                <p className="text-gray-600 mb-4">{userType.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {userType.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${userType.textColorClass} mt-0.5 mr-2`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href={userType.linkPath} className={`${userType.textColorClass} hover:opacity-80 font-medium inline-flex items-center`}>
-                  Learn More
-                  <ChevronRight className="h-5 w-5 ml-1" />
-                </Link>
+            <div 
+              key={index} 
+              className="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all group relative"
+              style={{
+                backgroundImage: `url(${CardBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="relative z-10">
+                <div className="h-40 flex items-center justify-center p-4">
+                  {userType.icon}
+                </div>
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-bold mb-3 text-white">{userType.title}</h3>
+                  <p className="text-gray-200 mb-4">{userType.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {userType.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-400 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-200">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={userType.linkPath} className="text-primary-400 hover:text-primary-300 font-medium inline-flex items-center">
+                    Learn More
+                    <ChevronRight className="h-5 w-5 ml-1" />
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

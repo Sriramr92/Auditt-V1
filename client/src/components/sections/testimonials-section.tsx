@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/shared/section-heading';
-import { Star } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
+import CardBackground from '../../assets/card-background.svg';
 
 interface Testimonial {
   quote: string;
@@ -11,19 +12,19 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "VerityChain's transparent audit registry gave our investors the confidence they needed. The on-chain verification of our security audits has become a key part of our trust-building process.",
+    quote: "Auditt's transparent audit registry gave our investors the confidence they needed. The on-chain verification of our security audits has become a key part of our trust-building process.",
     name: "Sarah Martinez",
     role: "CTO, DeFi Protocol",
     stars: 5
   },
   {
-    quote: "The bug bounty program helped us identify and fix critical vulnerabilities before launch. The quality of researchers in the VerityChain ecosystem is exceptional.",
+    quote: "The bug bounty program helped us identify and fix critical vulnerabilities before launch. The quality of researchers in the Auditt ecosystem is exceptional.",
     name: "Alex Johnson",
     role: "Lead Developer, NFT Marketplace",
     stars: 5
   },
   {
-    quote: "As an auditor, VerityChain has connected me with cutting-edge projects and helped establish my reputation in the Web3 security space. The platform's verification process adds credibility to my work.",
+    quote: "As an auditor, Auditt has connected me with cutting-edge projects and helped establish my reputation in the Web3 security space. The platform's verification process adds credibility to my work.",
     name: "Raj Patel",
     role: "Independent Security Auditor",
     stars: 5
@@ -32,7 +33,7 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-light-500 relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <SectionHeading
           tagline="Testimonials"
@@ -42,22 +43,31 @@ const TestimonialsSection: React.FC = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+            <div 
+              key={index} 
+              className="rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all relative overflow-hidden text-white"
+              style={{
+                backgroundImage: `url(${CardBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <Quote className="h-10 w-10 text-primary-400/50 absolute top-4 right-4" />
               <div className="flex items-center mb-4">
                 {Array.from({ length: testimonial.stars }).map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-200 mb-6 relative z-10">"{testimonial.quote}"</p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-300 mr-4 flex items-center justify-center">
-                  <span className="text-gray-600 font-semibold">
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-primary-500/30 mr-4 flex items-center justify-center border border-primary-400/30">
+                  <span className="text-white font-semibold">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-dark-600">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-300">{testimonial.role}</p>
                 </div>
               </div>
             </div>

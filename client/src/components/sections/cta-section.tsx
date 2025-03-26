@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { apiRequest } from '@/lib/queryClient';
 import { useMutation } from '@tanstack/react-query';
+import CtaBackground from '../../assets/cta-background.svg';
 
 const CTASection: React.FC = () => {
   const { toast } = useToast();
