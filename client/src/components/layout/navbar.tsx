@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import MobileMenu from './mobile-menu';
+import AudittLogo from '../../assets/auditt-logo';
 import {
   DropdownMenu,
   DropdownMenuContent,
