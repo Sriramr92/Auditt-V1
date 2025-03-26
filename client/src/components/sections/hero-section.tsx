@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             <span className="text-primary-400">Transparency in Every Audit</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            VerityChain is the leading Web3 security platform offering bug bounty programs and a verified auditor network backed by blockchain-based transparency.
+            Auditt is the leading Web3 security platform offering bug bounty programs and a verified auditor network backed by blockchain-based transparency.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button size="lg" className="bg-primary-600 hover:bg-primary-700 text-white">

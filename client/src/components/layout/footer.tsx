@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'wouter';
 import { Twitter, Linkedin, Facebook, Code2 } from 'lucide-react';
+import AudittLogo from '../../assets/auditt-logo';
 
 const Footer = () => {
   return (
@@ -10,13 +11,11 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary-600 to-accent-500 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">V</span>
-              </div>
-              <span className="text-xl font-bold">VerityChain</span>
+              <AudittLogo className="h-8 w-8" />
+              <span className="text-xl font-bold">Auditt</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              VerityChain provides blockchain-based security solutions for Web3 projects, offering transparent audit registries and bug bounty programs.
+              Auditt provides blockchain-based security solutions for Web3 projects, offering transparent audit registries and bug bounty programs.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -135,7 +134,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} VerityChain. All rights reserved.
+            &copy; {new Date().getFullYear()} Auditt. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
