@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeading from '@/components/shared/section-heading';
 import { Link } from 'wouter';
 import { Building, Shield, Users, ChevronRight } from 'lucide-react';
+import CardBackground from '../../assets/card-background.svg';
 
 interface UserType {
   icon: React.ReactNode;
@@ -62,7 +63,7 @@ const UserTypesSection: React.FC = () => {
         <SectionHeading
           tagline="Solutions For Everyone"
           title="Tailored Security Solutions"
-          description="VerityChain provides specialized services for different participants in the Web3 ecosystem."
+          description="Auditt provides specialized services for different participants in the Web3 ecosystem."
         />
         
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">

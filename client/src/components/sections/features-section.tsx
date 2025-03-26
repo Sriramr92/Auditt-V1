@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/shared/section-heading';
 import { LockKeyhole, Shield, Fingerprint, Users, FileText, Zap } from 'lucide-react';
+import CardBackground from '../../assets/card-background.svg';
 
 interface Feature {
   icon: React.ReactNode;
@@ -64,24 +65,32 @@ const features: Feature[] = [
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <SectionHeading
-          tagline="Why VerityChain"
+          tagline="Why Auditt"
           title="Securing the Web3 Ecosystem"
           description="Our comprehensive suite of security services provides unparalleled protection and transparency for blockchain projects."
         />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-light-500 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-shadow group">
-              <div className={`w-12 h-12 ${feature.colorClass} rounded-lg flex items-center justify-center mb-4 ${feature.hoverColorClass} transition-colors`}>
-                <div className={`${feature.iconColorClass} group-hover:text-white transition-colors`}>
+            <div 
+              key={index} 
+              className="rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all group relative overflow-hidden text-white"
+              style={{
+                backgroundImage: `url(${CardBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className={`w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4 ${feature.hoverColorClass} transition-colors`}>
+                <div className="text-white group-hover:text-white transition-colors">
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-dark-600">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+              <p className="text-gray-200">{feature.description}</p>
             </div>
           ))}
         </div>
