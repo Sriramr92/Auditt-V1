@@ -26,10 +26,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary-600 to-accent-500 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">V</span>
-            </div>
-            <span className="text-xl font-bold text-dark-600">VerityChain</span>
+            <AudittLogo className="h-8 w-8" />
+            <span className="text-xl font-bold text-dark-600">Auditt</span>
           </Link>
           
           {/* Desktop Navigation */}
