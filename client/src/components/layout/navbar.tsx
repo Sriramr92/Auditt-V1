@@ -21,33 +21,33 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <header className="sticky top-0 bg-card/90 backdrop-blur-sm shadow-sm z-50 border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <AudittLogo className="h-8 w-8" />
-            <span className="text-xl font-bold text-dark-600">Auditt</span>
+            <span className="text-xl font-bold text-foreground">Auditt</span>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/auditors" className={cn(
-              "nav-item text-dark-500 hover:text-primary-600 font-medium", 
-              isActiveLink("/auditors") && "text-primary-600"
+              "nav-item text-muted-foreground hover:text-primary font-medium", 
+              isActiveLink("/auditors") && "text-primary"
             )}>
               For Auditors
             </Link>
             <Link href="/business" className={cn(
-              "nav-item text-dark-500 hover:text-primary-600 font-medium", 
-              isActiveLink("/business") && "text-primary-600"
+              "nav-item text-muted-foreground hover:text-primary font-medium", 
+              isActiveLink("/business") && "text-primary"
             )}>
               For Business
             </Link>
 
             {/* Services Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-dark-500 hover:text-primary-600 font-medium nav-item">
+              <DropdownMenuTrigger className="flex items-center text-muted-foreground hover:text-primary font-medium nav-item">
                 Services
                 <ChevronDown className="h-4 w-4 ml-1" />
               </DropdownMenuTrigger>
@@ -68,8 +68,8 @@ const Navbar = () => {
             </DropdownMenu>
 
             <Link href="/community" className={cn(
-              "nav-item text-dark-500 hover:text-primary-600 font-medium", 
-              isActiveLink("/community") && "text-primary-600"
+              "nav-item text-muted-foreground hover:text-primary font-medium", 
+              isActiveLink("/community") && "text-primary"
             )}>
               Community
             </Link>
@@ -77,10 +77,10 @@ const Navbar = () => {
           
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="link" className="text-primary-600 font-medium hover:text-primary-700">
+            <Button variant="link" className="text-primary font-medium hover:text-primary/90">
               Sign In
             </Button>
-            <Button className="bg-primary-600 text-white hover:bg-primary-700">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get Started
             </Button>
           </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden rounded-md p-2 text-dark-500 hover:bg-primary-50 hover:text-primary-600 focus:outline-none"
+            className="md:hidden rounded-md p-2 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:outline-none"
           >
             <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />

@@ -48,8 +48,13 @@ const CTASection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-primary-600 to-accent-500 text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 text-white relative overflow-hidden" 
+      style={{ 
+        backgroundImage: `url(${CtaBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Web3 Project?</h2>
