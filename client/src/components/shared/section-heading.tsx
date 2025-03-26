@@ -15,30 +15,20 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   title,
   description,
   className,
-  textAlignment = 'center',
+  textAlignment = 'left',
   children
 }) => {
-  const alignmentClasses = {
-    left: 'text-left mx-0',
-    center: 'text-center mx-auto',
-    right: 'text-right ml-auto'
-  };
-
   return (
     <div className={cn(
-      `max-w-3xl mb-16 ${alignmentClasses[textAlignment]}`,
+      'max-w-3xl mb-10',
+      textAlignment === 'center' && 'mx-auto text-center',
+      textAlignment === 'right' && 'ml-auto text-right',
       className
     )}>
-      <span className="inline-block py-1 px-3 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-        {tagline}
-      </span>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-700">
-        {title}
-      </h2>
+      <span className="inline-block text-sm font-medium text-primary-600 mb-2">{tagline}</span>
+      <h2 className="text-3xl font-bold text-slate-800 mb-4 sm:text-4xl">{title}</h2>
       {description && (
-        <p className="text-lg text-gray-600">
-          {description}
-        </p>
+        <p className="text-lg text-slate-600 mt-4">{description}</p>
       )}
       {children}
     </div>

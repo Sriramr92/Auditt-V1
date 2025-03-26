@@ -64,6 +64,9 @@ const Navbar = () => {
                 <DropdownMenuItem asChild>
                   <Link href="/compliance" className="w-full">Regulatory Compliance</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/progress-trackers" className="w-full">Progress Trackers</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
