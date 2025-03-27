@@ -1,34 +1,69 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeading from '@/components/shared/section-heading';
-import { Fingerprint, Target, Trophy, ShieldCheck, Zap, Users } from 'lucide-react';
+import { 
+  Fingerprint, 
+  Target, 
+  Trophy, 
+  ShieldCheck, 
+  Zap, 
+  Users, 
+  ArrowRight, 
+  CheckCircle2,
+  AlertTriangle,
+  Banknote,
+  Shield
+} from 'lucide-react';
 
 const BugBounty: React.FC = () => {
+  const primaryColor = "#032757";
+  
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-accent-500 to-accent-600 py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/70 via-white to-white z-0"></div>
+        <div className="absolute inset-0 bg-dots-pattern opacity-20 z-0"></div>
+        <div className="absolute top-1/4 -left-24 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute bottom-1/4 -right-24 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-70"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#032757] text-sm font-medium mb-6">
+                <ShieldCheck className="h-4 w-4 mr-2" /> Community-Powered Security
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
                 Bug Bounty Programs
               </h1>
-              <p className="text-white/90 text-lg mb-8 md:pr-8">
+              <p className="text-slate-600 text-lg mb-8 md:pr-8 leading-relaxed">
                 Leverage our community of ethical hackers to identify and fix vulnerabilities in your Web3 applications before they can be exploited.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-accent-600 hover:bg-white/90" size="lg">
-                  Launch a Bug Bounty
+                <Button size="lg" className="btn-primary">
+                  Launch a Bug Bounty <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg">
+                <Button size="lg" variant="outline" className="btn-outline">
                   Join as a Hunter
                 </Button>
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <div className="w-96 h-80 bg-white/10 rounded-lg flex items-center justify-center">
-                <Fingerprint className="w-40 h-40 text-white/80" />
+              <div className="relative w-80 h-80">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#032757]/10 to-blue-400/10 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 border-2 border-dashed border-[#032757]/30 rounded-full animate-spin-slow"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="relative bg-white w-48 h-48 rounded-full shadow-lg flex items-center justify-center">
+                    <Fingerprint className="w-28 h-28 text-[#032757]" />
+                    <div className="absolute top-0 -right-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg animate-bounce" style={{ animationDuration: '2s' }}>
+                      <AlertTriangle className="w-6 h-6" />
+                    </div>
+                    <div className="absolute -bottom-6 -left-4 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg animate-bounce" style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}>
+                      <Banknote className="w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -36,54 +71,65 @@ const BugBounty: React.FC = () => {
       </section>
 
       {/* How it Works */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50/30 relative">
+        <div className="absolute inset-0 bg-dots-pattern opacity-20 z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <SectionHeading
             tagline="Bug Bounty Process"
             title="How Our Bug Bounty Programs Work"
             description="Our streamlined process ensures clear scope, fair rewards, and efficient vulnerability management."
+            textAlignment="center"
           />
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto mt-16">
             <div className="relative">
-              <div className="hidden md:block absolute left-16 top-0 bottom-0 w-1 bg-accent-100 z-0"></div>
+              <div className="hidden md:block absolute left-16 top-8 bottom-8 w-1 bg-gradient-to-b from-[#032757] via-indigo-500 to-blue-400 rounded-full z-0"></div>
               
               {[
                 {
-                  icon: <Target className="w-8 h-8 text-accent-500" />,
+                  icon: <Target className="w-7 h-7" />,
                   title: "Define Scope & Rewards",
-                  description: "Clearly define what systems are in scope and establish reward tiers based on vulnerability severity."
+                  description: "Clearly define what systems are in scope and establish reward tiers based on vulnerability severity.",
+                  color: "#032757"
                 },
                 {
-                  icon: <Users className="w-8 h-8 text-accent-500" />,
+                  icon: <Users className="w-7 h-7" />,
                   title: "Engage Security Researchers",
-                  description: "Your program is shared with our community of verified security researchers who begin hunting for vulnerabilities."
+                  description: "Your program is shared with our community of verified security researchers who begin hunting for vulnerabilities.",
+                  color: "#4f46e5"
                 },
                 {
-                  icon: <ShieldCheck className="w-8 h-8 text-accent-500" />,
+                  icon: <ShieldCheck className="w-7 h-7" />,
                   title: "Submission & Verification",
-                  description: "Researchers submit detailed vulnerability reports which are verified by our expert team."
+                  description: "Researchers submit detailed vulnerability reports which are verified by our expert team.",
+                  color: "#0891b2"
                 },
                 {
-                  icon: <Zap className="w-8 h-8 text-accent-500" />,
+                  icon: <Zap className="w-7 h-7" />,
                   title: "Fix & Remediation",
-                  description: "Collaborate with researchers to understand and fix identified vulnerabilities."
+                  description: "Collaborate with researchers to understand and fix identified vulnerabilities.",
+                  color: "#4f46e5"
                 },
                 {
-                  icon: <Trophy className="w-8 h-8 text-accent-500" />,
+                  icon: <Trophy className="w-7 h-7" />,
                   title: "Reward Distribution",
-                  description: "Once verified and fixed, rewards are distributed to the researchers who discovered the vulnerabilities."
+                  description: "Once verified and fixed, rewards are distributed to the researchers who discovered the vulnerabilities.",
+                  color: "#032757"
                 }
               ].map((step, index) => (
-                <div key={index} className="flex mb-12 relative z-10">
+                <div key={index} className="flex mb-12 relative z-10 group animate-fade-in" style={{animationDelay: `${index * 0.15}s`}}>
                   <div className="mr-8 flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-accent-100 text-accent-500 flex items-center justify-center shadow-sm">
+                    <div 
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 text-white"
+                      style={{background: `linear-gradient(135deg, ${step.color}, ${step.color}CC)`}}
+                    >
                       {step.icon}
                     </div>
                   </div>
-                  <div className="bg-light-500 rounded-xl p-6 shadow-sm border border-gray-100 flex-grow">
-                    <h3 className="text-xl font-semibold mb-2 text-dark-600">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex-grow group-hover:shadow-md transition-all">
+                    <h3 className="text-xl font-semibold mb-3 text-slate-800">{step.title}</h3>
+                    <p className="text-slate-600">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -93,14 +139,16 @@ const BugBounty: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-light-500">
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-white/0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div>
-              <span className="inline-block py-1 px-3 rounded-full bg-accent-100 text-accent-700 text-sm font-medium mb-4">
-                For Projects
-              </span>
-              <h2 className="text-3xl font-bold mb-6 text-dark-700">Why Launch a Bug Bounty?</h2>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-md transition-all">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#032757] text-sm font-medium mb-6">
+                <Shield className="h-4 w-4 mr-2" /> For Projects
+              </div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-800">Why Launch a Bug Bounty?</h2>
               
               <div className="space-y-6">
                 {[
@@ -123,24 +171,22 @@ const BugBounty: React.FC = () => {
                 ].map((benefit, index) => (
                   <div key={index} className="flex">
                     <div className="mr-4 flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full bg-accent-500 text-white flex items-center justify-center">
-                        <Check className="w-4 h-4" />
-                      </div>
+                      <CheckCircle2 className="h-5 w-5 text-[#032757]" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-dark-600 mb-1">{benefit.title}</h3>
-                      <p className="text-gray-600">{benefit.description}</p>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-1">{benefit.title}</h3>
+                      <p className="text-slate-600">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div>
-              <span className="inline-block py-1 px-3 rounded-full bg-accent-100 text-accent-700 text-sm font-medium mb-4">
-                For Hunters
-              </span>
-              <h2 className="text-3xl font-bold mb-6 text-dark-700">Why Become a Bug Hunter?</h2>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-md transition-all">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm font-medium mb-6">
+                <Users className="h-4 w-4 mr-2" /> For Hunters
+              </div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-800">Why Become a Bug Hunter?</h2>
               
               <div className="space-y-6">
                 {[
@@ -163,13 +209,11 @@ const BugBounty: React.FC = () => {
                 ].map((benefit, index) => (
                   <div key={index} className="flex">
                     <div className="mr-4 flex-shrink-0 mt-1">
-                      <div className="w-6 h-6 rounded-full bg-accent-500 text-white flex items-center justify-center">
-                        <Check className="w-4 h-4" />
-                      </div>
+                      <CheckCircle2 className="h-5 w-5 text-indigo-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-dark-600 mb-1">{benefit.title}</h3>
-                      <p className="text-gray-600">{benefit.description}</p>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-1">{benefit.title}</h3>
+                      <p className="text-slate-600">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
@@ -180,56 +224,75 @@ const BugBounty: React.FC = () => {
       </section>
 
       {/* Featured Programs */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-dark-700">Featured Bug Bounty Programs</h2>
-            <p className="text-lg text-gray-600">Explore active bug bounty programs currently running on our platform</p>
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50/30 relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800">Featured Bug Bounty Programs</h2>
+            <p className="text-lg text-slate-600">Explore active bug bounty programs currently running on our platform</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 name: "DeFi Protocol Alpha",
                 rewards: "Up to $50,000",
                 focus: "Smart Contract Vulnerabilities",
-                status: "Active"
+                status: "Active",
+                color: "#032757"
               },
               {
                 name: "NFT Marketplace Beta",
                 rewards: "Up to $25,000",
                 focus: "Frontend & Smart Contract Security",
-                status: "Active"
+                status: "Active",
+                color: "#4f46e5"
               },
               {
                 name: "CrossChain Bridge",
                 rewards: "Up to $100,000",
                 focus: "Cross-chain Vulnerabilities",
-                status: "Active"
+                status: "Active",
+                color: "#0891b2"
               }
             ].map((program, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-                <div className="h-24 bg-gradient-to-r from-accent-400 to-accent-500 flex items-center justify-center">
-                  <h3 className="text-xl font-bold text-white">{program.name}</h3>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-lg font-bold text-dark-600">{program.rewards}</span>
-                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
-                      {program.status}
-                    </span>
+              <div key={index} className="group animate-fade-in" style={{animationDelay: `${index * 0.15}s`}}>
+                <div className="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all h-full">
+                  <div 
+                    className="h-28 flex items-center justify-center relative overflow-hidden"
+                    style={{
+                      background: `linear-gradient(135deg, ${program.color}, ${program.color}CC)`
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-dots-pattern opacity-20"></div>
+                    <h3 className="text-xl font-bold text-white relative z-10">{program.name}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">Focus: {program.focus}</p>
-                  <Button className="w-full bg-accent-500 hover:bg-accent-600 text-white">
-                    View Program
-                  </Button>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-lg font-bold text-slate-800">{program.rewards}</span>
+                      <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                        {program.status}
+                      </span>
+                    </div>
+                    <p className="text-slate-600 mb-6">Focus: {program.focus}</p>
+                    <Button 
+                      className="w-full text-white transition-all" 
+                      style={{
+                        backgroundColor: program.color,
+                        boxShadow: `0 4px 14px -3px ${program.color}40`
+                      }}
+                    >
+                      View Program <ArrowRight className="ml-2 h-4 w-4 opacity-70 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="text-center mt-10">
-            <Button variant="outline" className="border-accent-500 text-accent-500 hover:bg-accent-50">
+          <div className="text-center mt-12">
+            <Button variant="outline" className="btn-outline">
               View All Programs
             </Button>
           </div>
@@ -237,42 +300,35 @@ const BugBounty: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-accent-500 text-white">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Secure Your Project?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Launch a bug bounty program today and harness the power of our security researcher community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-accent-600 hover:bg-white/90" size="lg">
-              Start a Bug Bounty
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg">
-              Talk to an Expert
-            </Button>
+      <section className="py-20 relative overflow-hidden">
+        {/* Background with gradient and pattern */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#032757] to-blue-600 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 z-0"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-400/20 to-transparent"></div>
+        <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Secure Your Project?</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Launch a bug bounty program today and harness the power of our security researcher community.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="bg-white text-[#032757] hover:bg-white/90" size="lg">
+                Start a Bug Bounty <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg">
+                Talk to an Expert
+              </Button>
+            </div>
           </div>
         </div>
       </section>
     </div>
   );
 };
-
-// This component is used inside the function but not defined
-const Check = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
 
 export default BugBounty;
