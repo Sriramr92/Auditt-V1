@@ -1,8 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/shared/section-heading';
 import { Link } from 'wouter';
-import { Building, Shield, Users, ChevronRight } from 'lucide-react';
-import CardBackground from '../../assets/card-background.svg';
+import { Building, Shield, Users, ChevronRight, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface UserType {
   icon: React.ReactNode;
@@ -10,100 +9,142 @@ interface UserType {
   description: string;
   features: string[];
   linkPath: string;
-  bgClass: string;
-  textColorClass: string;
+  primaryColor: string;
+  secondaryColor: string;
 }
 
 const userTypes: UserType[] = [
   {
-    icon: <Building className="h-16 w-16 text-white" />,
+    icon: <Building className="h-12 w-12" />,
     title: "For Businesses",
     description: "Secure your blockchain projects with comprehensive audit solutions and bug bounty programs.",
     features: [
       "Transparent audit reports",
       "Access to expert auditors",
-      "Bug bounty management"
+      "Bug bounty management",
+      "Compliance documentation"
     ],
     linkPath: "/business",
-    bgClass: "bg-gradient-to-r from-primary-600 to-primary-700",
-    textColorClass: "text-primary-600"
+    primaryColor: "#032757",
+    secondaryColor: "#0369a1"
   },
   {
-    icon: <Shield className="h-16 w-16 text-white" />,
+    icon: <Shield className="h-12 w-12" />,
     title: "For Auditors",
     description: "Join our network of verified security experts and access high-value audit opportunities.",
     features: [
       "Verified auditor status",
       "Premium project matching",
-      "Reputation building"
+      "Reputation building",
+      "Professional development"
     ],
     linkPath: "/auditors",
-    bgClass: "bg-gradient-to-r from-secondary-500 to-secondary-600",
-    textColorClass: "text-secondary-500"
+    primaryColor: "#4f46e5", 
+    secondaryColor: "#6366f1"
   },
   {
-    icon: <Users className="h-16 w-16 text-white" />,
+    icon: <Users className="h-12 w-12" />,
     title: "For Contributors",
     description: "Participate in our community as a researcher, developer, or knowledge contributor.",
     features: [
       "Bug bounty hunting",
       "Knowledge sharing",
-      "Community events"
+      "Community events",
+      "Skill development"
     ],
     linkPath: "/contributors",
-    bgClass: "bg-gradient-to-r from-accent-500 to-accent-600",
-    textColorClass: "text-accent-500"
+    primaryColor: "#0891b2",
+    secondaryColor: "#06b6d4"
   }
 ];
 
 const UserTypesSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-white relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/50"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <SectionHeading
           tagline="Solutions For Everyone"
           title="Tailored Security Solutions"
           description="Auditt provides specialized services for different participants in the Web3 ecosystem."
+          textAlignment="center"
         />
         
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-10 mt-16">
           {userTypes.map((userType, index) => (
             <div 
               key={index} 
-              className="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-all group relative"
-              style={{
-                backgroundImage: `url(${CardBackground})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
+              className="relative group animate-fade-in"
+              style={{animationDelay: `${index * 0.15}s`}}
             >
-              <div className="relative z-10">
-                <div className="h-40 flex items-center justify-center p-4">
+              {/* Card background with gradient border on hover */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-sm"
+                   style={{backgroundImage: `linear-gradient(to right, ${userType.primaryColor}, ${userType.secondaryColor})`}}></div>
+              
+              <div className="relative flex flex-col h-full bg-white rounded-2xl shadow-md border border-gray-100 p-6 transition-all duration-300 group-hover:shadow-xl overflow-hidden">
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-24 h-24 -mt-10 -mr-10 rounded-full opacity-10"
+                     style={{backgroundColor: userType.primaryColor}}></div>
+                     
+                {/* Icon */}
+                <div className="mb-6 p-4 rounded-2xl w-16 h-16 flex items-center justify-center"
+                     style={{
+                       color: "white",
+                       background: `linear-gradient(135deg, ${userType.primaryColor}, ${userType.secondaryColor})`
+                     }}>
                   {userType.icon}
                 </div>
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-3 text-white">{userType.title}</h3>
-                  <p className="text-gray-200 mb-4">{userType.description}</p>
-                  <ul className="space-y-2 mb-6">
+                
+                {/* Content */}
+                <h3 className="text-2xl font-bold mb-3 text-slate-800">{userType.title}</h3>
+                <p className="text-slate-600 mb-6 flex-grow">{userType.description}</p>
+                
+                {/* Features */}
+                <div className="mb-6">
+                  <div className="border-t border-gray-100 pt-4 mb-4"></div>
+                  <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-3">Key Benefits</h4>
+                  <ul className="space-y-3">
                     {userType.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-400 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-200">{feature}</span>
+                        <CheckCircle 
+                          className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" 
+                          style={{color: userType.primaryColor}} 
+                        />
+                        <span className="text-slate-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link href={userType.linkPath} className="text-primary-400 hover:text-primary-300 font-medium inline-flex items-center">
-                    Learn More
-                    <ChevronRight className="h-5 w-5 ml-1" />
-                  </Link>
                 </div>
+                
+                {/* Action Button */}
+                <Link href={userType.linkPath}
+                     className="mt-auto inline-flex items-center justify-center py-3 px-5 rounded-lg text-white font-medium transition-all duration-200 w-full"
+                     style={{
+                       background: `linear-gradient(135deg, ${userType.primaryColor}, ${userType.secondaryColor})`,
+                       boxShadow: `0 4px 14px -3px ${userType.primaryColor}40`
+                     }}>
+                  Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </div>
             </div>
           ))}
         </div>
+        
+        {/* Additional Information */}
+        <div className="mt-16 max-w-3xl mx-auto text-center">
+          <p className="text-slate-600">
+            Not sure which solution fits your needs? 
+            <Link href="/contact" className="text-[#032757] font-medium hover:underline ml-1">
+              Contact our team for a personalized consultation.
+            </Link>
+          </p>
+        </div>
       </div>
+      
+      {/* Background Elements */}
+      <div className="absolute top-1/4 left-0 w-64 h-64 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-tl from-blue-50 to-indigo-50 rounded-full blur-3xl opacity-50 -z-10"></div>
     </section>
   );
 };
