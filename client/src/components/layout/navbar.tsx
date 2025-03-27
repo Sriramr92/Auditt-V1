@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             <Link href="/auditors" className={cn(
               "nav-item text-slate-600 hover:text-primary-600 font-medium", 
               isActiveLink("/auditors") && "text-primary-600"
@@ -44,32 +44,24 @@ const Navbar = () => {
             )}>
               For Business
             </Link>
-
-            {/* Services Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-slate-600 hover:text-primary-600 font-medium nav-item">
-                Services
-                <ChevronDown className="h-4 w-4 ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="center" className="w-48">
-                <DropdownMenuItem asChild>
-                  <Link href="/audit-marketplace" className="w-full">Audit Marketplace</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/bug-bounty" className="w-full">Bug Bounty</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/verified-auditors" className="w-full">Verified Auditor Network</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/compliance" className="w-full">Regulatory Compliance</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/progress-trackers" className="w-full">Progress Trackers</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
+            <Link href="/contributors" className={cn(
+              "nav-item text-slate-600 hover:text-primary-600 font-medium", 
+              isActiveLink("/contributors") && "text-primary-600"
+            )}>
+              For Contributors
+            </Link>
+            <Link href="/compliance" className={cn(
+              "nav-item text-slate-600 hover:text-primary-600 font-medium", 
+              isActiveLink("/compliance") && "text-primary-600"
+            )}>
+              Regulatory & Compliance
+            </Link>
+            <Link href="/audit-marketplace" className={cn(
+              "nav-item text-slate-600 hover:text-primary-600 font-medium", 
+              isActiveLink("/audit-marketplace") && "text-primary-600"
+            )}>
+              Audit Marketplace
+            </Link>
             <Link href="/community" className={cn(
               "nav-item text-slate-600 hover:text-primary-600 font-medium", 
               isActiveLink("/community") && "text-primary-600"
