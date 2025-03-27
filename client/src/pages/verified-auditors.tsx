@@ -266,15 +266,3 @@ const VerifiedAuditors: React.FC = () => {
 };
 
 export default VerifiedAuditors;
-import React from 'react';
-
-const VerifiedAuditors: React.FC = () => {
-  return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold">Verified Auditor Network</h1>
-      {/* Add content here */}
-    </div>
-  );
-};
-
-export default VerifiedAuditors;
