@@ -60,7 +60,7 @@ const CTASection: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Web3 Project?</h2>
             <p className="text-lg mb-6 text-white/90 max-w-xl">Join the leading Web3 security platform with blockchain-based transparency and a network of verified security experts.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-white text-primary-600 hover:bg-white/90" size="lg">
+              <Button className="bg-white text-[#032757] hover:bg-white/90" size="lg">
                 Schedule a Demo
               </Button>
               <Button variant="outline" className="bg-transparent border border-white hover:bg-white/10 text-white" size="lg">
@@ -94,7 +94,7 @@ const CTASection: React.FC = () => {
               <div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-white text-primary-600 hover:bg-white/90" 
+                  className="w-full bg-white text-[#032757] hover:bg-white/90" 
                   size="lg"
                   disabled={mutation.isPending}
                 >
