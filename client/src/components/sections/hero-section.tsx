@@ -36,28 +36,15 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <Button
-              size="lg"
-              className="bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-2"
-              onClick={() => window.location.href = "/bug-bounty"}
-            >
+            <Link href="/bug-bounty" className="bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-3 inline-flex items-center">
               <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
-            </Button>
-            <Button
-              size="lg"
-              className="bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-2"
-              onClick={() => window.location.href = "/post-project"}
-            >
+            </Link>
+            <Link href="/post-project" className="bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-3 inline-flex items-center">
               <FileEdit className="h-5 w-5 mr-2" /> Post Your Project
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-2"
-              onClick={() => window.location.href = "/verified-auditors"}
-            >
+            </Link>
+            <Link href="/verified-auditors" className="bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-3 px-6 inline-flex items-center">
               <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
-            </Button>
+            </Link>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-gray-500 mb-6">
