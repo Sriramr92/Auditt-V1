@@ -69,22 +69,6 @@ const HeroSection: React.FC = () => {
         
         {/* Decorative elements that span the whole width */}
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden">
-          {/* Hero right side curve decoration similar to auditt.org.uk */}
-          <svg 
-            className="absolute top-1/4 right-0 h-1/2 w-1/2" 
-            viewBox="0 0 500 400" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              d="M20,380 Q100,300 200,250 Q300,200 400,100 Q450,50 480,20" 
-              stroke="#ff6b35" 
-              strokeWidth="3" 
-              fill="none" 
-              strokeLinecap="round"
-            />
-          </svg>
-          
           {/* Square decoration */}
           <div className="absolute top-1/3 left-1/4 w-12 h-12 border-2 border-blue-200 rounded-lg transform rotate-12 animate-float"></div>
           
@@ -97,6 +81,10 @@ const HeroSection: React.FC = () => {
               <path d="M12 4V20M4 12H20" stroke="#032757" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </div>
+          
+          {/* Additional decorative elements */}
+          <div className="absolute top-1/2 right-1/5 w-4 h-4 bg-blue-100 rounded-full animate-float-delay-2"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-6 h-6 border border-gray-200 rounded-full animate-float"></div>
         </div>
       </div>
       
