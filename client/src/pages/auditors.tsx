@@ -6,18 +6,24 @@ const Auditors: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-secondary-600 to-secondary-700 py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#032757] to-blue-600 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 z-0"></div>
+        <div className="absolute top-1/4 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto max-w-6xl px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Join Our Verified Auditor Network
               </h1>
-              <p className="text-white/90 text-lg mb-8 md:pr-8">
-                Enhance your reputation, access premium projects, and become part of the leading Web3 security ecosystem. VerityChain helps auditors showcase their expertise and connect with cutting-edge blockchain projects.
+              <p className="text-white/90 text-lg mb-8 md:pr-8 leading-relaxed">
+                Enhance your reputation, access premium projects, and become part of the leading Web3 security ecosystem. Auditt helps auditors showcase their expertise and connect with cutting-edge blockchain projects.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-white text-secondary-600 hover:bg-white/90" size="lg">
+                <Button className="bg-white text-[#032757] hover:bg-white/90" size="lg">
                   Apply to Join
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg">
@@ -26,8 +32,12 @@ const Auditors: React.FC = () => {
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <div className="w-96 h-80 bg-white/10 rounded-lg flex items-center justify-center">
-                <Shield className="w-40 h-40 text-white/80" />
+              <div className="relative w-80 h-80">
+                <div className="absolute inset-0 bg-white/10 rounded-2xl"></div>
+                <div className="absolute inset-0 border border-white/20 rounded-2xl"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Shield className="w-40 h-40 text-white/80" />
+                </div>
               </div>
             </div>
           </div>
@@ -35,16 +45,18 @@ const Auditors: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="absolute inset-0 bg-dots-pattern opacity-10 z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary-100 text-secondary-700 text-sm font-medium mb-4">
-              Auditor Benefits
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-700">
-              Why Join VerityChain
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#032757] text-sm font-medium mb-4">
+              <Award className="h-4 w-4 mr-2" /> Auditor Benefits
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+              Why Join Auditt
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-slate-600">
               Our platform provides unique advantages for security experts in the Web3 space.
             </p>
           </div>
@@ -52,42 +64,46 @@ const Auditors: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <CheckCircle className="w-10 h-10 text-secondary-500" />,
+                icon: <CheckCircle className="w-10 h-10 text-[#032757]" />,
                 title: "Verified Status",
                 description: "Gain a trusted verification badge after our rigorous vetting process, enhancing your reputation in the Web3 security space."
               },
               {
-                icon: <Briefcase className="w-10 h-10 text-secondary-500" />,
+                icon: <Briefcase className="w-10 h-10 text-[#032757]" />,
                 title: "Premium Projects",
                 description: "Get matched with high-value, innovative blockchain projects looking for expert security reviews."
               },
               {
-                icon: <Award className="w-10 h-10 text-secondary-500" />,
+                icon: <Award className="w-10 h-10 text-[#032757]" />,
                 title: "Reputation Building",
                 description: "Build your professional profile with blockchain-verified audit results and client testimonials."
               },
               {
-                icon: <Network className="w-10 h-10 text-secondary-500" />,
+                icon: <Network className="w-10 h-10 text-[#032757]" />,
                 title: "Expert Network",
                 description: "Connect with fellow security professionals and share knowledge in our private auditor community."
               },
               {
-                icon: <Shield className="w-10 h-10 text-secondary-500" />,
+                icon: <Shield className="w-10 h-10 text-[#032757]" />,
                 title: "Transparent Process",
                 description: "Benefit from our fair, transparent matching system and dispute resolution protocols."
               },
               {
-                icon: <CheckCircle className="w-10 h-10 text-secondary-500" />,
+                icon: <CheckCircle className="w-10 h-10 text-[#032757]" />,
                 title: "Continuous Learning",
                 description: "Access exclusive training resources and stay current with the latest security practices."
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition-all">
-                <div className="mb-4">
+              <div 
+                key={index} 
+                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all group animate-fade-in"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
+                <div className="mb-4 transition-transform duration-300 group-hover:scale-110 transform">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-dark-600">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-slate-800">{benefit.title}</h3>
+                <p className="text-slate-600">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -95,44 +111,56 @@ const Auditors: React.FC = () => {
       </section>
 
       {/* How to Join Section */}
-      <section className="py-16 bg-light-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-dark-700">How to Become a Verified Auditor</h2>
-            <p className="text-lg text-gray-600">Follow these steps to join our network of elite Web3 security professionals</p>
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50/30 relative">
+        <div className="absolute inset-0 bg-dots-pattern opacity-10 z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#032757] text-sm font-medium mb-4">
+              <Shield className="h-4 w-4 mr-2" /> Joining Process
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">How to Become a Verified Auditor</h2>
+            <p className="text-lg text-slate-600">Follow these steps to join our network of elite Web3 security professionals</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              <div className="hidden md:block absolute left-16 top-0 bottom-0 w-1 bg-secondary-100 z-0"></div>
+              <div className="hidden md:block absolute left-16 top-8 bottom-8 w-1 bg-gradient-to-b from-[#032757] via-indigo-500 to-blue-400 rounded-full z-0"></div>
               
               {[
                 {
                   title: "Submit Application",
-                  description: "Fill out our comprehensive application form detailing your experience and expertise in Web3 security."
+                  description: "Fill out our comprehensive application form detailing your experience and expertise in Web3 security.",
+                  color: "#032757"
                 },
                 {
                   title: "Technical Assessment",
-                  description: "Complete a technical assessment to demonstrate your skills in smart contract auditing and vulnerability detection."
+                  description: "Complete a technical assessment to demonstrate your skills in smart contract auditing and vulnerability detection.",
+                  color: "#4f46e5"
                 },
                 {
                   title: "Background Verification",
-                  description: "Our team verifies your past work, references, and contributions to the security community."
+                  description: "Our team verifies your past work, references, and contributions to the security community.",
+                  color: "#0891b2"
                 },
                 {
                   title: "Onboarding",
-                  description: "Once approved, complete our onboarding process and gain access to the auditor portal and available projects."
+                  description: "Once approved, complete our onboarding process and gain access to the auditor portal and available projects.",
+                  color: "#032757"
                 }
               ].map((step, index) => (
-                <div key={index} className="flex mb-12 relative z-10">
+                <div key={index} className="flex mb-12 relative z-10 group animate-fade-in" style={{animationDelay: `${index * 0.15}s`}}>
                   <div className="mr-8 flex-shrink-0">
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary-500 text-white flex items-center justify-center font-bold text-lg shadow-md">
-                      {index + 1}
+                    <div 
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 text-white"
+                      style={{background: `linear-gradient(135deg, ${step.color}, ${step.color}CC)`}}
+                    >
+                      <span className="text-lg font-bold">{index + 1}</span>
                     </div>
                   </div>
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex-grow">
-                    <h3 className="text-xl font-semibold mb-2 text-dark-600">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex-grow group-hover:shadow-md transition-all">
+                    <h3 className="text-xl font-semibold mb-3 text-slate-800">{step.title}</h3>
+                    <p className="text-slate-600">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -142,15 +170,26 @@ const Auditors: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-secondary-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Auditor Network?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Take the first step toward becoming a recognized Web3 security expert.
-          </p>
-          <Button className="bg-white text-secondary-600 hover:bg-white/90" size="lg">
-            Apply Now
-          </Button>
+      <section className="py-20 relative overflow-hidden">
+        {/* Background with gradient and pattern */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#032757] to-blue-600 z-0"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 z-0"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-400/20 to-transparent"></div>
+        <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Join Our Auditor Network?</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Take the first step toward becoming a recognized Web3 security expert.
+            </p>
+            <Button className="bg-white text-[#032757] hover:bg-white/90" size="lg">
+              Apply Now
+            </Button>
+          </div>
         </div>
       </section>
     </div>
