@@ -36,23 +36,23 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <a href="/bug-bounty">
+            <Link href="/bug-bounty">
               <Button
                 size="lg"
                 className="bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-2"
               >
                 <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
               </Button>
-            </a>
-            <a href="/post-project">
+            </Link>
+            <Link href="/post-project">
               <Button
                 size="lg"
                 className="bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-2"
               >
                 <FileEdit className="h-5 w-5 mr-2" /> Post Your Project
               </Button>
-            </a>
-            <a href="/verified-auditors">
+            </Link>
+            <Link href="/verified-auditors">
               <Button
                 size="lg"
                 variant="outline"
@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
               >
                 <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
               </Button>
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-gray-500 mb-6">

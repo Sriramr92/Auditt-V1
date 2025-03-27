@@ -18,18 +18,18 @@ const Footer = () => {
               Auditt provides blockchain-based security solutions for Web3 projects, offering transparent audit registries and bug bounty programs.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-500 hover:text-primary-600 transition-colors">
+              <Link href="/twitter" className="text-slate-500 hover:text-primary-600 transition-colors">
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-slate-500 hover:text-primary-600 transition-colors">
+              </Link>
+              <Link href="/github" className="text-slate-500 hover:text-primary-600 transition-colors">
                 <Code2 className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-slate-500 hover:text-primary-600 transition-colors">
+              </Link>
+              <Link href="/linkedin" className="text-slate-500 hover:text-primary-600 transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-slate-500 hover:text-primary-600 transition-colors">
+              </Link>
+              <Link href="/facebook" className="text-slate-500 hover:text-primary-600 transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -58,9 +58,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/emergency-response" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Emergency Response
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -70,29 +70,29 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-slate-800">Company</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/about-us" className="text-slate-600 hover:text-primary-600 transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/careers" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/blog" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/press" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Press
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/contact" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -102,14 +102,14 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-slate-800">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/documentation" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/knowledge-base" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Knowledge Base
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/community" className="text-slate-600 hover:text-primary-600 transition-colors">
@@ -117,14 +117,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/security-blog" className="text-slate-600 hover:text-primary-600 transition-colors">
                   Security Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-primary-600 transition-colors">
+                <Link href="/api-reference" className="text-slate-600 hover:text-primary-600 transition-colors">
                   API Reference
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -137,15 +137,15 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Auditt. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
+            <Link href="/privacy-policy" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
+            </Link>
+            <Link href="/cookie-policy" className="text-slate-500 hover:text-primary-600 text-sm transition-colors">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
