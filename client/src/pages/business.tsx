@@ -89,8 +89,8 @@ const Business: React.FC = () => {
               },
               {
                 icon: <Check className="w-10 h-10 text-[#032757]" />,
-                title: "Regulatory Compliance",
-                description: "Guidance and documentation to help your project comply with evolving Web3 security regulations."
+                title: "Regulatory and Compliance",
+                description: "Guidance and documentation to help your project comply with evolving Web3 security regulations and standards."
               }
             ].map((service, index) => (
               <div 
