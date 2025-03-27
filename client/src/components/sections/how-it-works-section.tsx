@@ -101,8 +101,7 @@ const HowItWorksSection: React.FC = () => {
                   <p className="text-slate-600 text-center mb-6">{step.description}</p>
                 </div>
                 
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-full transition-all duration-300 hover:shadow-md hover:border-[#032757]/20">
-                  <h4 className="text-sm uppercase tracking-wide text-slate-500 mb-3">Key Benefits:</h4>
+                <div className="flex justify-center mb-4">
                   <ul className="space-y-2">
                     {step.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start">
