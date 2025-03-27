@@ -34,25 +34,31 @@ const ProgressTrackersPage: React.FC = () => {
             <select
               value={animationSpeed}
               onChange={(e) => setAnimationSpeed(e.target.value as 'slow' | 'normal' | 'fast')}
-              className="text-sm border rounded px-2 py-1 border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              className="text-sm border rounded px-2 py-1 border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#032757]"
             >
               <option value="slow">Slow</option>
               <option value="normal">Normal</option>
               <option value="fast">Fast</option>
             </select>
           </div>
-          <Button variant="outline" size="sm" onClick={refreshAnimations} className="flex items-center">
+          <Button variant="outline" size="sm" onClick={refreshAnimations} className="flex items-center text-[#032757] border-[#032757] hover:bg-[#032757]/10">
             <RefreshCcw className="h-4 w-4 mr-2" /> Refresh Animations
           </Button>
         </div>
       </div>
       
       <Tabs defaultValue="audits" value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-6">
-          <TabsTrigger value="audits" className="flex items-center">
+        <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-6 bg-slate-100 text-slate-600">
+          <TabsTrigger 
+            value="audits" 
+            className="flex items-center data-[state=active]:text-[#032757] data-[state=active]:shadow-none data-[state=active]:bg-white"
+          >
             <BarChart4 className="w-4 h-4 mr-2" /> Security Audits
           </TabsTrigger>
-          <TabsTrigger value="bounties" className="flex items-center">
+          <TabsTrigger 
+            value="bounties" 
+            className="flex items-center data-[state=active]:text-[#032757] data-[state=active]:shadow-none data-[state=active]:bg-white"
+          >
             <BarChart4 className="w-4 h-4 mr-2" /> Bug Bounties
           </TabsTrigger>
         </TabsList>
