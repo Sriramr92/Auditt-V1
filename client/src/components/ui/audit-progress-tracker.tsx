@@ -69,7 +69,7 @@ export const AuditProgressTracker: React.FC<AuditProgressTrackerProps> = ({
       case 'scheduled':
         return 'bg-amber-500';
       case 'in-progress':
-        return 'bg-blue-500';
+        return 'bg-[#032757]';
       case 'review':
         return 'bg-purple-500';
       case 'completed':
@@ -92,7 +92,7 @@ export const AuditProgressTracker: React.FC<AuditProgressTrackerProps> = ({
         );
       case 'in-progress':
         return (
-          <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-300">
+          <Badge variant="outline" className="bg-slate-50 text-[#032757] border-[#032757]">
             <Shield className="w-3 h-3 mr-1" />
             In Progress
           </Badge>
