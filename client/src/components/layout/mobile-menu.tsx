@@ -42,12 +42,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
           Agentic Audit
         </Link>
         <div className="pt-2 flex space-x-3">
-          <a href="#" className="flex-1 text-center px-3 py-2 rounded-md text-gray-300 font-medium border border-gray-600 hover:text-white hover:border-gray-500">
+          <Link href="/sign-in" className="flex-1 text-center px-3 py-2 rounded-md text-gray-300 font-medium border border-gray-600 hover:text-white hover:border-gray-500">
             Sign In
-          </a>
-          <a href="#" className="flex-1 text-center px-3 py-2 rounded-md bg-[#ff6b35] text-white font-medium hover:bg-[#ff6b35]/90">
+          </Link>
+          <Link href="/get-started" className="flex-1 text-center px-3 py-2 rounded-md bg-[#ff6b35] text-white font-medium hover:bg-[#ff6b35]/90">
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </div>

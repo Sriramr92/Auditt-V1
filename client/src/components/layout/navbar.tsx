@@ -78,12 +78,16 @@ const Navbar = () => {
           
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="link" className="text-gray-300 font-medium hover:text-white">
-              Sign In
-            </Button>
-            <Button className="bg-[#ff6b35] text-white hover:bg-[#ff6b35]/90">
-              Get Started
-            </Button>
+            <Link href="/sign-in">
+              <Button variant="link" className="text-gray-300 font-medium hover:text-white">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/get-started">
+              <Button className="bg-[#ff6b35] text-white hover:bg-[#ff6b35]/90">
+                Get Started
+              </Button>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
