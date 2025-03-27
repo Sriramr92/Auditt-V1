@@ -26,20 +26,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         <Link href="/business" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
           For Business
         </Link>
-        <Link href="/audit-marketplace" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
-          Audit Marketplace
-        </Link>
-        <Link href="/bug-bounty" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
-          Bug Bounty
-        </Link>
-        <Link href="/verified-auditors" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
-          Verified Auditor Network
+        <Link href="/contributors" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
+          For Contributors
         </Link>
         <Link href="/compliance" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
-          Regulatory Compliance
+          Regulatory & Compliance
         </Link>
-        <Link href="/progress-trackers" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
-          Progress Trackers
+        <Link href="/audit-marketplace" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
+          Audit Marketplace
         </Link>
         <Link href="/community" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
           Community
