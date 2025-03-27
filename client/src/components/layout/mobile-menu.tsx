@@ -38,6 +38,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         <Link href="/community" onClick={handleLinkClick} className="block py-2 px-3 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-md">
           Community
         </Link>
+        <Link href="/agentic-audit" onClick={handleLinkClick} className="block py-2 px-3 mt-2 bg-gradient-to-r from-[#ff6b35] to-[#ff9d6d] text-white font-medium rounded-md">
+          Agentic Audit
+        </Link>
         <div className="pt-2 flex space-x-3">
           <a href="#" className="flex-1 text-center px-3 py-2 rounded-md text-primary-600 font-medium border border-primary-600">
             Sign In

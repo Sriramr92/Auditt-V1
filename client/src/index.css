@@ -198,6 +198,20 @@
     animation: shimmer 3s infinite;
   }
   
+  @keyframes spinner {
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spinner 0.8s linear infinite;
+    display: inline-block;
+  }
+  
   /* Progress Bar Styling */
   .progress-bar {
     @apply h-2 bg-gray-200 rounded-full overflow-hidden;

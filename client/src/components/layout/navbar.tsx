@@ -68,6 +68,12 @@ const Navbar = () => {
             )}>
               Community
             </Link>
+            <Link href="/agentic-audit" className={cn(
+              "bg-gradient-to-r from-[#ff6b35] to-[#ff9d6d] text-white px-3 py-1 rounded-full font-medium transition-all hover:shadow-md", 
+              isActiveLink("/agentic-audit") && "shadow-md"
+            )}>
+              Agentic Audit
+            </Link>
           </nav>
           
           {/* CTA Buttons */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Shield, ShieldCheck, Fingerprint, ExternalLink } from "lucide-react";
+import { Shield, ShieldCheck, Fingerprint, ExternalLink, FileEdit } from "lucide-react";
 import PartnerLogo1 from "../../assets/partner-logo1.svg";
 import PartnerLogo2 from "../../assets/partner-logo2.svg";
 import PartnerLogo3 from "../../assets/partner-logo3.svg";
@@ -30,25 +30,37 @@ const HeroSection: React.FC = () => {
           </h1>
 
           <p className="text-lg mb-10 text-slate-700 max-w-2xl mx-auto">
-            Auditt is a pioneering web3 platform that allows auditors to
-            upload their audits to a blockchain, creating an on-chain,
-            transparent, and verifiable database.
+            Auditt is a pioneering web3 platform that allows auditors to upload
+            their audits to a blockchain, creating an on-chain, transparent, and
+            verifiable database.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#032757] hover:bg-[#032757]/90 text-white text-base rounded-lg transition-all px-6 py-2"
-            >
-              <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/70 text-[#032757] hover:bg-white border border-[#032757] rounded-lg text-base py-2"
-            >
-              <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
-            </Button>
+            <Link href="/bug-bounty">
+              <Button
+                size="lg"
+                className="bg-[#032757] hover:bg-[#032757]/90 text-white text-base rounded-lg transition-all px-6 py-2"
+              >
+                <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
+              </Button>
+            </Link>
+            <Link href="/post-project">
+              <Button
+                size="lg"
+                className="bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-2"
+              >
+                <FileEdit className="h-5 w-5 mr-2" /> Post Your Project
+              </Button>
+            </Link>
+            <Link href="/verified-auditors">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/70 text-[#032757] hover:bg-white border border-[#032757] rounded-lg text-base py-2"
+              >
+                <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
+              </Button>
+            </Link>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-slate-500 mb-6">
@@ -66,28 +78,39 @@ const HeroSection: React.FC = () => {
             <span className="text-sm">500+ Verified Auditors</span>
           </div>
         </div>
-        
+
         {/* Decorative elements that span the whole width */}
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden">
           {/* Square decoration */}
           <div className="absolute top-1/3 left-1/4 w-12 h-12 border-2 border-blue-200 rounded-lg transform rotate-12 animate-float"></div>
-          
+
           {/* Circle decoration */}
           <div className="absolute bottom-1/3 right-1/4 w-8 h-8 bg-yellow-100 rounded-full animate-float-delay-1"></div>
-          
+
           {/* Plus decoration */}
           <div className="absolute top-1/4 right-1/3">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V20M4 12H20" stroke="#032757" strokeWidth="2" strokeLinecap="round"/>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4V20M4 12H20"
+                stroke="#032757"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </div>
-          
+
           {/* Additional decorative elements */}
           <div className="absolute top-1/2 right-1/5 w-4 h-4 bg-blue-100 rounded-full animate-float-delay-2"></div>
           <div className="absolute bottom-1/4 left-1/3 w-6 h-6 border border-gray-200 rounded-full animate-float"></div>
         </div>
       </div>
-      
+
       {/* Trusted by Section */}
       <div className="bg-white py-16 md:py-20">
         <div className="container mx-auto px-4">
