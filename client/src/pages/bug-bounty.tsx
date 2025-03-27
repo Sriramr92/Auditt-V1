@@ -332,3 +332,15 @@ const BugBounty: React.FC = () => {
 };
 
 export default BugBounty;
+import React from 'react';
+
+const BugBounty: React.FC = () => {
+  return (
+    <div className="min-h-screen p-8">
+      <h1 className="text-3xl font-bold">Bug Bounty Programs</h1>
+      {/* Add content here */}
+    </div>
+  );
+};
+
+export default BugBounty;

@@ -499,3 +499,15 @@ const PostProjectPage: React.FC = () => {
 };
 
 export default PostProjectPage;
+import React from 'react';
+
+const PostProject: React.FC = () => {
+  return (
+    <div className="min-h-screen p-8">
+      <h1 className="text-3xl font-bold">Post Your Project</h1>
+      {/* Add content here */}
+    </div>
+  );
+};
+
+export default PostProject;
