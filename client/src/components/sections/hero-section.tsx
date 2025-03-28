@@ -34,24 +34,24 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <a 
-              href="/bug-bounty"
-              className="inline-flex items-center bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-3"
+            <button 
+              onClick={() => window.open('/bug-bounty', '_self')}
+              className="inline-flex items-center bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-3 cursor-pointer"
             >
               <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
-            </a>
-            <a 
-              href="/post-project"
-              className="inline-flex items-center bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-3"
+            </button>
+            <button 
+              onClick={() => window.open('/post-project', '_self')}
+              className="inline-flex items-center bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-3 cursor-pointer"
             >
               <FileEdit className="h-5 w-5 mr-2" /> Post Your Project
-            </a>
-            <a 
-              href="/verified-auditors"
-              className="inline-flex items-center bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-3 px-6"
+            </button>
+            <button 
+              onClick={() => window.open('/verified-auditors', '_self')}
+              className="inline-flex items-center bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-3 px-6 cursor-pointer"
             >
               <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
-            </a>
+            </button>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-gray-500 mb-6">
