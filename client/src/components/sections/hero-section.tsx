@@ -11,8 +11,8 @@ const HeroSection: React.FC = () => {
     <section className="relative overflow-hidden bg-gray-100">
       {/* Modern Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-gray-200 to-gray-300 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-gray-100 to-gray-200 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
       </div>
 
       <div className="relative z-10 h-[600px] flex flex-col items-center justify-center">

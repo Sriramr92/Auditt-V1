@@ -23,15 +23,14 @@ const BugBounty: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/70 via-white to-white z-0"></div>
-        <div className="absolute inset-0 bg-dots-pattern opacity-20 z-0"></div>
-        <div className="absolute top-1/4 -left-24 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-70"></div>
-        <div className="absolute bottom-1/4 -right-24 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/70 via-white to-white z-0"></div>
+        <div className="absolute top-1/4 -left-24 w-64 h-64 bg-gray-100 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute bottom-1/4 -right-24 w-64 h-64 bg-gray-100 rounded-full blur-3xl opacity-70"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#032757] text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-50 text-[#032757] text-sm font-medium mb-6">
                 <ShieldCheck className="h-4 w-4 mr-2" /> Community-Powered
                 Security
               </div>
