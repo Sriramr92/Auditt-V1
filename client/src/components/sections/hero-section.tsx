@@ -1,6 +1,4 @@
 import React from "react";
-import { useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
 import { Shield, ShieldCheck, Fingerprint, ExternalLink, FileEdit } from "lucide-react";
 import PartnerLogo1 from "../../assets/partner-logo1.svg";
 import PartnerLogo2 from "../../assets/partner-logo2.svg";
@@ -9,7 +7,6 @@ import PartnerLogo4 from "../../assets/partner-logo4.svg";
 import PartnerLogo5 from "../../assets/partner-logo5.svg";
 
 const HeroSection: React.FC = () => {
-  const [location, setLocation] = useLocation();
   return (
     <section className="relative overflow-hidden bg-gray-100">
       {/* Modern Background Elements */}
@@ -37,28 +34,24 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <Button
-              size="lg"
-              className="bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-2"
-              onClick={() => setLocation("/bug-bounty")}
+            <a 
+              href="/bug-bounty"
+              className="inline-flex items-center bg-black hover:bg-black/90 text-white text-base rounded-lg transition-all px-6 py-3"
             >
               <Shield className="h-5 w-5 mr-2" /> Explore Bug Bounties
-            </Button>
-            <Button
-              size="lg"
-              className="bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-2"
-              onClick={() => setLocation("/post-project")}
+            </a>
+            <a 
+              href="/post-project"
+              className="inline-flex items-center bg-[#ff6b35] hover:bg-[#ff6b35]/90 text-white text-base rounded-lg transition-all px-6 py-3"
             >
               <FileEdit className="h-5 w-5 mr-2" /> Post Your Project
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-2"
-              onClick={() => setLocation("/verified-auditors")}
+            </a>
+            <a 
+              href="/verified-auditors"
+              className="inline-flex items-center bg-white/70 text-black hover:bg-white border border-black rounded-lg text-base py-3 px-6"
             >
               <ShieldCheck className="h-5 w-5 mr-2" /> Verified Auditor Network
-            </Button>
+            </a>
           </div>
 
           <div className="flex items-center justify-center space-x-3 text-gray-500 mb-6">
